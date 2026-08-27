@@ -121,3 +121,18 @@ Prescription_Item must reference an existing Prescription and Medication.
 ### 2.Database Design (ISO/IEC 19505 / IE Standards)
 
 #### 2.1Conceptual Model (ER/EER Diagram)
+##### Entity Overview
+
+| Entity | Primary Key (PK) | Purpose |
+|---|---|---|
+| PATIENT | `PatientID` | Stores patient information. |
+| DOCTOR | `DoctorID` | Stores common information about doctors. |
+| GENERAL_PRACTITIONER | `DoctorID` (FK) | Represents General Practitioners as a subtype of Doctor. |
+| SPECIALIST | `DoctorID` (FK) | Represents Specialists as a subtype of Doctor. |
+| SPECIALTY | `SpecialtyID` | Stores medical specialty information. |
+| DOCTOR_SCHEDULE | `ScheduleID` | Stores doctor schedules and availability. |
+| APPOINTMENT | `AppointmentID` | Stores appointments between patients and doctors. |
+| MEDICAL_HISTORY | `MedicalHistoryID` | Stores patient medical history records. |
+| PRESCRIPTION | `PrescriptionID` | Stores digital prescriptions issued by doctors. |
+| MEDICATION | `MedicationID` | Stores medication information. |
+| PRESCRIPTION_ITEM | `PrescriptionID`, `MedicationID` | Connects prescriptions and medications and stores dosage details. |
