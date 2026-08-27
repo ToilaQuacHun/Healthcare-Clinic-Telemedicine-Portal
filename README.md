@@ -5,11 +5,12 @@ Team Name: G2
 
 Team Members:
 
-Lê Nguyễn Quốc Hùng n24dece070@student.ptithcm.edu.vn
+Lê Nguyễn Quốc Hùng n24dece070@student.ptithcm.edu.vn
 
-Trần Hoàng Hải Đăng n24dece059@student.ptithcm.edu.vn
+Trần Hoàng Hải Đăng n24dece059@student.ptithcm.edu.vn
 
-Trần Quốc Huy n24dece074@student.ptithcm.edu.vn
+Trần Quốc Huy n24dece074@student.ptithcm.edu.vn
+
 Project Title: 
 MediConnect: Integrated Healthcare Clinic & Telemedicine Management System
 ## B. Report structure
@@ -84,37 +85,38 @@ The database aims to improve data consistency and make it easier to retrieve rel
 - BR38: A Prescription Item may store dosage, frequency, duration, and specific instructions.
 ##### 1.2.8 Main Constraints
 The database design applies the following major constraints:
-PatientID must be unique.
+
+PatientID must be unique.
 
-DoctorID must be unique.
+DoctorID must be unique.
 
-LicenseNumber must be unique for Doctors when provided.
+LicenseNumber must be unique for Doctors when provided.
 
-Specialist.DoctorID must reference an existing Doctor.
+Specialist.DoctorID must reference an existing Doctor.
 
-General_Practitioner.DoctorID must reference an existing Doctor.
+General_Practitioner.DoctorID must reference an existing Doctor.
 
-Specialist.SpecialtyID must reference an existing Specialty.
+Specialist.SpecialtyID must reference an existing Specialty.
 
-Doctor_Schedule.DoctorID must reference an existing Doctor.
+Doctor_Schedule.DoctorID must reference an existing Doctor.
 
-Appointment.PatientID must reference an existing Patient.
+Appointment.PatientID must reference an existing Patient.
 
-Appointment.DoctorID must reference an existing Doctor.
+Appointment.DoctorID must reference an existing Doctor.
 
-Appointment.ScheduleID must reference an existing Doctor Schedule.
+Appointment.ScheduleID must reference an existing Doctor Schedule.
 
-Medical_History.PatientID must reference an existing Patient.
+Medical_History.PatientID must reference an existing Patient.
 
-Prescription.PatientID must reference an existing Patient.
+Prescription.PatientID must reference an existing Patient.
 
-Prescription.DoctorID must reference an existing Doctor.
+Prescription.DoctorID must reference an existing Doctor.
 
-Prescription.AppointmentID must reference an existing Appointment.
+Prescription.AppointmentID must reference an existing Appointment.
 
-Each Appointment can have at most one Prescription because AppointmentID is unique in the Prescription table.
+Each Appointment can have at most one Prescription because AppointmentID is unique in the Prescription table.
 
-Prescription_Item must reference an existing Prescription and Medication.
+Prescription_Item must reference an existing Prescription and Medication.
 
 ### 2.Database Design (ISO/IEC 19505 / IE Standards)
 
