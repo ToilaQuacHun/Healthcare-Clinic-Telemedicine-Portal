@@ -4,7 +4,9 @@ Project ID & Title: (Healthcare Clinic & Telemedicine Portal)
 Team Name: G2
 Team Members:
 Lê Nguyễn Quốc Hùng n24dece070@student.ptithcm.edu.vn
+
 Trần Hoàng Hải Đăng n24dece059@student.ptithcm.edu.vn
+
 Trần Quốc Huy n24dece074@student.ptithcm.edu.vn
 Project Title: 
 MediConnect: Integrated Healthcare Clinic & Telemedicine Management System
@@ -18,33 +20,33 @@ The Healthcare Clinic & Telemedicine Portal is designed as a centralized datab
 #### 1.1System Objective
 The main objective of the system is to provide a reliable database for storing and managing the essential information of a healthcare clinic.
 The system is designed to:
-Store and manage patient information.
-Store and manage doctor information.
-Store medical specialty information for Specialists.
-Manage doctor schedules and available working periods.
-Manage appointments between Patients and Doctors.
-Support two appointment types: In-person and Telemedicine.
-Maintain patient medical history.
-Store digital prescriptions issued by Doctors.
-Store medication information used in prescriptions.
-Maintain the relationship between prescriptions and medications.
+- Store and manage patient information.
+- Store and manage doctor information.
+- Store medical specialty information for Specialists.
+- Manage doctor schedules and available working periods.
+- Manage appointments between Patients and Doctors.
+- Support two appointment types: In-person and Telemedicine.
+- Maintain patient medical history.
+- Store digital prescriptions issued by Doctors.
+- Store medication information used in prescriptions.
+- Maintain the relationship between prescriptions and medications.
 The database aims to improve data consistency and make it easier to retrieve related healthcare information.
 #### 1.2Business Rules & Constraints
 ##### 1.2.1 Patient
-BR1: Each Patient must have a unique PatientID.
-BR2: A Patient may have many Appointments.
-BR3: Each Appointment must belong to exactly one Patient.
-BR4: A Patient may have many Medical History records.
-BR5: Each Medical History record must belong to exactly one Patient.
+- BR1: Each Patient must have a unique PatientID.
+- BR2: A Patient may have many Appointments.
+- BR3: Each Appointment must belong to exactly one Patient.
+- BR4: A Patient may have many Medical History records.
+- BR5: Each Medical History record must belong to exactly one Patient.
 ##### 1.2.2 Doctor and Medical Staff
-BR6: Each Doctor must have a unique DoctorID.
-BR7: Each Doctor may be classified as either a General Practitioner or a Specialist.
-BR8: Each General Practitioner must reference an existing Doctor.
-BR9: Each Specialist must reference an existing Doctor.
-BR10: Each Specialist must belong to exactly one Specialty.
-BR11: One Specialty may be associated with many Specialists.
+- BR6: Each Doctor must have a unique DoctorID.
+- BR7: Each Doctor may be classified as either a General Practitioner or a Specialist.
+- BR8: Each General Practitioner must reference an existing Doctor.
+- BR9: Each Specialist must reference an existing Doctor.
+- BR10: Each Specialist must belong to exactly one Specialty.
+- BR11: One Specialty may be associated with many Specialists.
 ##### 1.2.3 Doctor Schedule
-BR12: A Doctor may have many Doctor Schedule records.
+- BR12: A Doctor may have many Doctor Schedule records.
 BR13: Each Doctor Schedule must belong to exactly one Doctor.
 BR14: Each Doctor Schedule contains a schedule date, start time, and end time.
 ##### 1.2.4 Appointment
