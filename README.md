@@ -28,6 +28,7 @@ The main objective of the system is to provide a reliable database for storing a
 The system is designed to:
 - Store and manage patient information.
 - Store and manage doctor information.
+- Classify doctors as General Practitioners or Specialists.
 - Store medical specialty information for Specialists.
 - Manage doctor schedules and available working periods.
 - Manage appointments between Patients and Doctors.
