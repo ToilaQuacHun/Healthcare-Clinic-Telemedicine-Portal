@@ -155,7 +155,7 @@ Các nội dung chi tiết được trình bày trong báo cáo của nhóm:
 - Kiểm thử, bảo mật và phân quyền.
 - Tích hợp giao diện Flask với MySQL.
 
-**Tài liệu:** [Báo cáo MediConnect G2](docs/G2_BaoCao.pdf)
+**Tài liệu:** [Báo cáo MediConnect G2]([docs/G2_BaoCao.pdf](https://docs.google.com/document/d/1KDScY3_KR7Hbz158LKo01zvqP5-lz1r8/edit?usp=sharing&ouid=102331205998537801349&rtpof=true&sd=true))
 
 **Sơ đồ EER:** [EER Diagram](docs/diagram.png)
 
