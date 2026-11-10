@@ -1,0 +1,9 @@
+{% extends 'base.html' %}{% block title %}Tổng quan{% endblock %}{% block content %}
+<div class="page-header"><div><span class="eyebrow">DASHBOARD</span><h1>Tổng quan phòng khám</h1><p>Thống kê thời gian thực từ MySQL Phrase3.</p></div><a class="btn btn-primary" href="{{ url_for('appointment_new_form') }}">+ Đặt lịch khám</a></div>
+<div class="row g-3 mb-4">
+{% for title,num,emoji in [('Bệnh nhân',counts.patients,'♧'),('Bác sĩ đang hoạt động',counts.doctors,'⚕'),('Lịch khám',counts.appointments,'▦'),('Đơn thuốc',counts.prescriptions,'▤')] %}
+<div class="col-6 col-xl-3"><div class="stat-card"><div class="stat-icon">{{ emoji }}</div><span>{{ title }}</span><strong>{{ '{:,}'.format(num) }}</strong><small>Thông tin từ cơ sở dữ liệu</small></div></div>{% endfor %}
+</div>
+<div class="panel"><div class="panel-head"><div><h2>Lịch khám gần đây</h2><p>Đọc từ View <code>vw_AppointmentDetails</code></p></div><a href="{{ url_for('appointments') }}">Xem tất cả →</a></div>
+<div class="table-responsive"><table class="table table-hover align-middle"><thead><tr><th>Mã</th><th>Bệnh nhân</th><th>Bác sĩ</th><th>Thời gian</th><th>Hình thức</th><th>Trạng thái</th></tr></thead><tbody>{% for a in latest %}<tr><td>#{{ a.AppointmentID }}</td><td>{{ a.PatientName }}</td><td>{{ a.DoctorName }}</td><td>{{ a.AppointmentDateTime.strftime('%d/%m/%Y %H:%M') }}</td><td>{{ a.Modality }}</td><td><span class="status status-{{ a.Status|lower|replace(' ','-') }}">{{ a.Status }}</span></td></tr>{% else %}<tr><td colspan="6" class="text-muted">Chưa có lịch khám.</td></tr>{% endfor %}</tbody></table></div></div>
+{% endblock %}
