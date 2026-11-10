@@ -43,7 +43,7 @@ MediConnect-G2/
 ├── docs/
 │   ├── G2_BaoCao.pdf
 │   ├── diagram.png
-│   └── screenshots/
+│ 
 │
 ├── scripts/
 ├── templates/
